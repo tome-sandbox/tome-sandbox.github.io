@@ -479,8 +479,8 @@ var versions = (function() {
     }
 
     var versions = {
-        DEFAULT: '1.6.0',
-        ALL: [ '1.4.9', '1.5.9', '1.6.0' ],
+        DEFAULT: '1.7.6',
+        ALL: [ '1.7.6' ],
         DISPLAY: { 'master': 'next' },
 
         name: function(ver) {
@@ -515,7 +515,7 @@ var versions = (function() {
         // Lists available versions in the given <option> element(s).
         list: function($el, $container) {
             var html;
-            if (versions.ALL.length < 2) {
+            if (versions.ALL.length < 1) {
                 ($container || $el).hide();
             } else {
                 html = '';
