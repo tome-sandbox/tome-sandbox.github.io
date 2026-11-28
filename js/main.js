@@ -480,7 +480,7 @@ var versions = (function() {
 
     var versions = {
         DEFAULT: '1.7.6',
-        ALL: [ '1.7.6' ],
+        ALL: [ '1.7.4', '1.7.6' ],
         DISPLAY: { 'master': 'next' },
 
         name: function(ver) {
