@@ -480,7 +480,7 @@ var versions = (function() {
 
     var versions = {
         DEFAULT: '1.7.6',
-        ALL: [ '1.7.4', '1.7.6' ],
+        ALL: [ '1.7.4', '1.7.6', 'master' ],
         DISPLAY: { 'master': 'next' },
 
         name: function(ver) {
@@ -542,7 +542,7 @@ var versions = (function() {
 
         // If 'master' isn't shown, then redirect queries to current release.
         redirectMasterToDefault: function(new_hash, old_hash) {
-            if (parseHashQueryString().ver == 'master') {
+            if (versions.ALL.indexOf('master') == -1 && parseHashQueryString().ver == 'master') {
                 hasher.replaceHash(locationHashNoQuery());
                 return true;
             }
